@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: stock-service
+server:
+  port: 8900
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8769/eureka/

@@ -1,0 +1,18 @@
+version: "3.8"
+services:
+    mongodb:
+        image: mongo
+        restart: always
+        environment:
+            MONGO_INITDB_ROOT_USERNAME: root
+            MONGO_INITDB_ROOT_PASSWORD: root
+        volumes:
+            - ./data/mongo:/data/db
+        networks:
+            - resolute
+        ports:
+            - "27017:27017"
+networks:
+    resolute:
+        external:
+            name: resolute
